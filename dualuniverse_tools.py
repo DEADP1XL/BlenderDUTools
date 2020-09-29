@@ -28,6 +28,11 @@ class MESH_OT_dualUniverseTools(bpy.types.Operator):
         description="Applies a wireframe modifier for better appearance in game.",
         default=True
     )
+    wire_width: bpy.props.FloatProperty(
+        name="Wire Width",
+        description="Width of Wireframe Lines in Meters",
+        default=0.125
+    )
 
     def execute(self, context):
         if len(context.selected_objects) < 1:
@@ -50,7 +55,7 @@ class MESH_OT_dualUniverseTools(bpy.types.Operator):
                         hasMod = 1
                 if not hasMod:            
                     bpy.ops.object.modifier_add(type='WIREFRAME')
-                    obj.modifiers["Wireframe"].thickness = 0.125
+                    obj.modifiers["Wireframe"].thickness = self.wire_width
                 else:
                     obj.modifiers["Wireframe"].show_viewport = True
             else:
