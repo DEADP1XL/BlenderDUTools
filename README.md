@@ -13,4 +13,5 @@ Add to Blender via Edit -> Preferences -> Add-Ons -> Install
 # Usage:
 1. In Object Mode, select all items to be prepared for export
 2. Click 'Prep as Wireframe' or 'Prep as Solid Model' button from the DU Tools panel in the sidebar (hide/show with 'N' key by default)
+3. Adjust the Wire Width property in the tool's Undo Panel to set the Wireframe thickness (if applicable)
 3. Export to .obj as usual (I recommend setting it to only export selection, and to not use materials).
